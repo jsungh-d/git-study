@@ -1,0 +1,72 @@
+.game-box {
+
+}
+.game-row {
+	display: flex;
+}
+.game-col {
+	display: flex;
+	position: relative;
+	flex: 0 0 41px;
+	max-width: 41px;
+	height: 41px;
+	align-items: center;
+	justify-content: center;
+	background-color: #e3ac84;
+}
+.game-col:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #222;
+}
+.game-col:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 1px;
+	height: 100%;
+	background-color: #222;
+}
+.game-col:last-child:before {
+	width: 50%;
+}
+.game-col:first-child:before {
+	left: 50%;
+	width: 50%;
+}
+.game-row:first-child .game-col:after {
+	top: 50%;
+	height: 50%;
+}
+.game-row:last-child .game-col:after {
+	height: 50%;
+}
+
+
+.game-col span.user {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    background-color: #000;
+    z-index: 1;
+}
+.game-col span.ai {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	background-color: #fff;
+	z-index: 1;
+}
